@@ -6,7 +6,7 @@ import { Check } from "lucide-vue-next";
 import type { GetCitiesQuery, GetSearchQuery } from "#gql";
 import SearchResultsSkeleton from "./skeletons/SearchResultsSkeleton.vue";
 import Skeleton from "./Skeleton.vue";
-import { refDebounced } from "@vueuse/core";
+import { onClickOutside, refDebounced } from "@vueuse/core";
 import { useWindowScroll } from "@vueuse/core";
 
 const { y } = useWindowScroll();
@@ -37,6 +37,8 @@ const resultType = ref<"services" | "providers">("services");
 const inputRef = useTemplateRef<HTMLInputElement | null>("inputRef");
 const screenOpen = ref(false);
 const isScrolled = computed(() => y.value > 400);
+const searchContainer = useTemplateRef<HTMLElement | null>("searchContainer");
+
 
 const debouncedSearchInput = refDebounced(searchInput, 300);
 
@@ -124,27 +126,33 @@ const emptySearchInput = () => {
   selectedCategory.value = "";
 };
 
-watch(
-  () => searchInput.value,
-  () => {
-    if (searchInput.value === "") {
-      selectedCategory.value = "";
-    }
-  },
-);
+// watch(
+//   () => searchInput.value,
+//   () => {
+//     if (searchInput.value === "") {
+//       selectedCategory.value = "";
+//     }
+//   },
+// );
 
 watch(
-  () => searchInput.value,
+   searchInput,
   (newVal) => {
+    console.log("Search Input Changed:", newVal);
     screenOpen.value = newVal.length > 0;
   },
 );
+
+onClickOutside(searchContainer, () => {
+  screenOpen.value = false;
+  dropdownOpen.value = false;
+});
 </script>
 
 <template>
   <div
     :hidden="type=== 'header' && !isScrolled "
-    
+    ref="searchContainer"
     class="search-component w-full"
     :class="props.class + (type === 'header' ? ' max-md:hidden' : '')"
   >
@@ -194,10 +202,9 @@ watch(
         </div>
       </div>
       <div
+      v-if="screenOpen"
         class="search-screen absolute top-full left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-auto xl:right-0 mt-3 duration-300 shadow-2xl z-30 rounded-2xl bg-white w-4xl max-w-[96vw] overflow-hidden"
-        :class="
-          screenOpen ? 'opacity-100 ' : 'h-0 opacity-0 pointer-events-none'
-        "
+
       >
         <div
           class="md:hidden flex items-center text-sm gap-4 px-6 border-b border-b-gray-300"
@@ -394,12 +401,12 @@ watch(
         </li>
       </ul>
     </div>
-    <div
+    <!-- <div
       class="absolute top-0 left-0 z-20 w-dvw h-dvh bg-black opacity-0"
       :class="{
         hidden: !searchInput,
       }"
       @click="screenOpen = false"
-    ></div>
+    ></div> -->
   </div>
 </template>
