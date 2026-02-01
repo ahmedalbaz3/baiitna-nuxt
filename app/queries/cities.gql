@@ -1,0 +1,13 @@
+query getCities {
+  getCities {
+    code
+    success
+    message
+    data {
+      id
+      name
+      nameAr
+      countryId
+    }
+  }
+}

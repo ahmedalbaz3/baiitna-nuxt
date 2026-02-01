@@ -1,0 +1,46 @@
+mutation SocialLogin(
+  $providerId: String!
+  $device: DeviceEnum!
+  $deviceName: String!
+) {
+  socialLogin(
+    input: {
+      providerId: $providerId
+      provider: GOOGLE
+      loginDetails: { deviceName: $deviceName, device: $device }
+    }
+  ) {
+    data {
+      id
+      firstName
+      lastName
+      email
+      phone
+      profilePicture
+      code
+      isBlocked
+      isVerified
+      notificationManager
+      token
+      countryId
+      cityId
+      notifyMe
+      role
+      favLang
+      unseenNotificationsCount
+      hasUpdatedAddress
+      fullName
+      hasPassword
+      createdAt
+      readableCreatedAt
+      updatedAt
+      readableUpdatedAt
+      deletedAt
+      arFullName
+      NotificationsSeen
+    }
+    code
+    success
+    message
+  }
+}

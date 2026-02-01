@@ -1,0 +1,126 @@
+{
+  "HomePage": {
+    "Hero": {
+      "title": "Find property service providers in your city",
+      "description": "Search by service and city to connect with trusted companies near you. View their work and get in touch — quick, easy, and reliable.",
+      "searchPlaceholder": "Search for services or companies",
+      "searchSuggest": "Try searching for a",
+      "searchButton": "Search",
+      "search": {
+        "service": "Services",
+        "results": "Results in",
+        "noResults": "No search results for",
+        "city": "city",
+        "provider": "Providers"
+      }
+    },
+    "breadcrumb": "Home",
+    "title": "Home - All the services you need for your property | baiitna",
+    "description": "Discover baiitna platform that connects homeowners with service providers for construction, decor, and maintenance. Find the best quotes and get your service.",
+    "Feature": {
+      "title": "Achieve your home improvement needs in only three steps",
+      "step1": "Choose your service",
+      "step2": "Filter your location",
+      "step3": "Browse and connect"
+    },
+    "Categories": {
+      "title": "Explore Popular Categories"
+    },
+    "PopularServices": {
+      "title": "Most viewed services",
+      "viewAll": "View All Services"
+    },
+    "Services": {
+      "title": "Easily find property service providers in",
+      "viewAll": "View All Providers"
+    },
+    "Ads": {
+      "title": "Simplify your search",
+      "description": "Easily find and connect with professional service providers anywhere"
+    },
+    "Card": {
+      "viewProfile": "View Profile"
+    }
+  },
+  "Header": {
+    "findProvider": "Find Provider",
+    "join": "Join as a provider",
+    "login": "Login",
+    "signup": "Sign Up",
+    "lang": "العربية",
+    "logoTitle": "baiitna",
+    "logoAlt": "Baiitna Logo",
+    "requestQuote": "Request a Quote",
+    "navDropDown": {
+      "title": "Provider Categories",
+      "viewProviders": "View All Providers",
+      "viewCategories": "View All Categories"
+    },
+    "userMenu": {
+      "settings": "Settings",
+      "ticket": "Support Ticket",
+      "logout": "Logout",
+      "about": "About Us",
+      "faq": "FAQ",
+      "quote": "My Quotation Requests"
+    }
+  },
+  "Footer": {
+    "description": "baiitna, making it simple to find the right experts in your city.",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "business": "baiitna for Business",
+    "blog": "Blog",
+    "all_services": "All Services",
+    "faq": "FAQ",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "rights_reserved": "baiitna. All rights reserved."
+  },
+  "Auth": {
+    "newHeading": "Join baiitna for free",
+    "existingHeading": "Welcome back to baiitna",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Don’t have an account yet?",
+    "forgotPassword": "Forgot your password?",
+    "signInButton": "Login",
+    "signUpButton": "Sign Up",
+    "googleButton": "Continue with Google",
+    "appleButton": "Continue with Apple",
+    "joinButton": "Join Now",
+    "errors": {
+      "emailRequired": "Email is a required field.",
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordInvalid": "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.",
+      "passwordRequired": "Password is a required field.",
+      "passwordMinLength": "Password must be at least 8 characters long.",
+      "passwordUppercase": "Password must contain at least one uppercase letter.",
+      "passwordLowercase": "Password must contain at least one lowercase letter.",
+      "passwordNumber": "Password must contain at least one number.",
+      "passwordSpecial": "Password must contain at least one special character ."
+    }
+  },
+  "MobileMenu": {
+    "about": "About Us",
+    "business": "baiitna for Business",
+    "blog": "Blog",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "login": "Login",
+    "signup": "Sign Up",
+    "language": "Language",
+    "join": "Join as a provider",
+    "services": "Services",
+    "favorites": "Favorites List",
+    "quotes": "Requested a Quote",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "support": "Support Tickets",
+    "logout": "Logout",
+    "showAllServices": "Show All Services"
+  }
+}

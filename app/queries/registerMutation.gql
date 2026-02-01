@@ -1,0 +1,51 @@
+mutation mutateRegister(
+  $firstName: String!
+  $lastName: String!
+  $email: String!
+  $password: String!
+  $deviceName: String!
+  $device: DeviceEnum!
+) {
+  register(
+    input: {
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      password: $password
+      loginDetails: { deviceName: $deviceName, device: $device }
+    }
+  ) {
+    code
+    success
+    message
+    data {
+      id
+      firstName
+      lastName
+      email
+      phone
+      profilePicture
+      code
+      isBlocked
+      isVerified
+      notificationManager
+      token
+      countryId
+      cityId
+      notifyMe
+      role
+      favLang
+      unseenNotificationsCount
+      hasUpdatedAddress
+      fullName
+      hasPassword
+      createdAt
+      readableCreatedAt
+      updatedAt
+      readableUpdatedAt
+      deletedAt
+      arFullName
+      NotificationsSeen
+    }
+  }
+}

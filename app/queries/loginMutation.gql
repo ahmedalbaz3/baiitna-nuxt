@@ -1,0 +1,47 @@
+mutation mutateLogin(
+  $email: String!
+  $password: String!
+  $deviceType: DeviceEnum!
+  $deviceName: String!
+) {
+  userLogin(
+    input: {
+      email: $email
+      password: $password
+      loginDetails: { device: $deviceType, deviceName: $deviceName }
+    }
+  ) {
+    code
+    success
+    message
+    data {
+      id
+      firstName
+      lastName
+      email
+      phone
+      profilePicture
+      code
+      isBlocked
+      isVerified
+      notificationManager
+      token
+      countryId
+      cityId
+      notifyMe
+      role
+      favLang
+      unseenNotificationsCount
+      hasUpdatedAddress
+      fullName
+      hasPassword
+      createdAt
+      readableCreatedAt
+      updatedAt
+      readableUpdatedAt
+      deletedAt
+      arFullName
+      NotificationsSeen
+    }
+  }
+}

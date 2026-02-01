@@ -1,0 +1,26 @@
+query getAllCategories($limit: Int!) {
+  Allcategories(paginate: { limit: $limit }) {
+    code
+    success
+    message
+    data {
+      items {
+        id
+        nameEn
+        nameAr
+        image {
+          file
+        }
+        code
+        companyServices {
+          id
+          nameEn
+          nameAr
+          image {
+            file
+          }
+        }
+      }
+    }
+  }
+}

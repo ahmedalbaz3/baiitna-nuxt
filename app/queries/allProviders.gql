@@ -1,0 +1,35 @@
+query getAllProviders($serviceId: String, $limit: Int!, $cityName: String) {
+  allProviders(
+    filter: { serviceId: $serviceId, cityName: $cityName }
+    paginate: { limit: $limit }
+  ) {
+    code
+    success
+    message
+    data {
+      items {
+        id
+        slug
+        businessNameEn
+        businessNameAr
+        aboutEn
+        aboutAr
+        sloganEn
+        sloganAr
+        phones
+        businessPhone
+        whatsapp
+        businessEmail
+        jobTitle
+        code
+
+        logo {
+          file
+        }
+        cover {
+          file
+        }
+      }
+    }
+  }
+}

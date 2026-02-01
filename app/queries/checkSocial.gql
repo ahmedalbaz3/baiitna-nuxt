@@ -1,0 +1,18 @@
+query checkSocial($providerId: String!, $email: String!, $token: String!) {
+  checkSocialProviderStatus(
+    input: {
+      providerId: $providerId
+      provider: GOOGLE
+      email: $email
+      isManuallyEntered: false
+      providerAuth: { authToken: $token }
+    }
+  ) {
+    code
+    success
+    message
+    data {
+      actionRequired
+    }
+  }
+}

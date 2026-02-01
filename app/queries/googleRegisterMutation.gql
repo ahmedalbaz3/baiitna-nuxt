@@ -1,0 +1,56 @@
+mutation SocialRegister(
+  $firstName: String!
+  $lastName: String!
+  $email: String!
+  $providerId: String!
+  $device: DeviceEnum!
+  $deviceName: String!
+  $isManuallyEntered: Boolean!
+  $token: String!
+) {
+  socialRegister(
+    input: {
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      loginDetails: { deviceName: $deviceName, device: $device }
+      providerId: $providerId
+      provider: GOOGLE
+      isManuallyEntered: $isManuallyEntered
+      providerAuth: { authToken: $token }
+    }
+  ) {
+    code
+    success
+    message
+    data {
+      id
+      firstName
+      lastName
+      email
+      phone
+      profilePicture
+      code
+      isBlocked
+      isVerified
+      notificationManager
+      token
+      countryId
+      cityId
+      notifyMe
+      role
+      favLang
+      unseenNotificationsCount
+      hasUpdatedAddress
+      fullName
+      hasPassword
+      createdAt
+      readableCreatedAt
+      updatedAt
+      readableUpdatedAt
+      deletedAt
+      arFullName
+      NotificationsSeen
+    }
+  }
+}

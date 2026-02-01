@@ -1,0 +1,22 @@
+query GetAllServices {
+  services {
+    code
+    success
+    message
+    data {
+      items {
+        id
+        nameEn
+        nameAr
+        code
+        slug
+        category {
+          nameEn
+          nameAr
+          id
+        }
+        numberOfCompanies
+      }
+    }
+  }
+}

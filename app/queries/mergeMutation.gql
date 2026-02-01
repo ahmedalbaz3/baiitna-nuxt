@@ -1,0 +1,50 @@
+mutation SocialMerge(
+  $providerId: String!
+  $device: DeviceEnum!
+  $deviceName: String!
+  $email: String!
+  $token: String!
+) {
+  socialMerge(
+    input: {
+      providerId: $providerId
+      provider: GOOGLE
+      email: $email
+      loginDetails: { deviceName: $deviceName, device: $device }
+      providerAuth: { authToken: $token }
+    }
+  ) {
+    code
+    success
+    message
+    data {
+      id
+      firstName
+      lastName
+      email
+      phone
+      profilePicture
+      code
+      isBlocked
+      isVerified
+      notificationManager
+      token
+      countryId
+      cityId
+      notifyMe
+      role
+      favLang
+      unseenNotificationsCount
+      hasUpdatedAddress
+      fullName
+      hasPassword
+      createdAt
+      readableCreatedAt
+      updatedAt
+      readableUpdatedAt
+      deletedAt
+      arFullName
+      NotificationsSeen
+    }
+  }
+}

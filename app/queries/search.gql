@@ -1,0 +1,27 @@
+query getSearch($searchKey: String!, $limit: Float!, $cityId: Float) {
+  search(searchKey: $searchKey, limit: $limit, cityId: $cityId) {
+    code
+    success
+    message
+    data {
+      providers {
+        id
+        nameEn
+        nameAr
+        slug
+        logo {
+          file
+          thumbnail
+          type
+          size
+        }
+      }
+      services {
+        id
+        nameEn
+        nameAr
+        slug
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+query getServices {
+  services(paginate: { limit: 3, page: 1 }) {
+    code
+    success
+    message
+    data {
+      items {
+        id
+        nameEn
+        nameAr
+        code
+        isFeatured
+        isActive
+        numberOfCompanies
+        categoryId
+        clicks
+        slug
+        createdAt
+        updatedAt
+        getClickCount
+      }
+    }
+  }
+}
